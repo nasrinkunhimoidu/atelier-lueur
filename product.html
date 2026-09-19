@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Atelier Lueur</title>
+  <meta name="description" content="Product detail page.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+    <section class="page-hero" style="padding:34px 0 8px;background:transparent">
+      <div class="inner container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a><span class="sep">/</span>
+          <a href="shop.html">Shop</a><span class="sep">/</span>
+          <span id="bcName">Product</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="pd-wrap">
+        <div class="pd-gallery" id="pdGallery"></div>
+        <div class="pd-info" id="pdInfo"></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="relatedSection">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">You may also love</span>
+          <h2 class="h-lg mt-16 reveal" data-delay="1">Complete the look</h2>
+        </div>
+        <div class="grid g-4" id="relatedGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist — Atelier</title>
+  <meta name="description" content="Your saved Atelier Lueur pieces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+
+    <section class="page-hero">
+      <div class="inner container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Wishlist</span></nav>
+        <h1 class="display mt-16">Saved for later</h1>
+        <p>Pieces you're dreaming about. When you're ready, they'll be waiting.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top:24px">
+      <div class="grid g-4" id="wishGrid"></div>
+    </section>
+
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

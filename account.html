@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account — Atelier</title>
+  <meta name="description" content="Sign in, register or manage your Atelier Lueur account.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+
+    <section class="page-hero">
+      <div class="inner container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span id="bc">Account</span></nav>
+        <h1 class="display mt-16" id="heroTitle">My Account</h1>
+        <p id="heroSub">Orders, addresses and preferences in one place.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top:24px;padding-bottom:120px">
+      <div class="auth-wrap" id="authView"></div>
+      <div class="account-grid" id="dashView" style="display:none">
+        <aside class="account-side" id="acctSide"></aside>
+        <div class="acct-panel" id="acctPanel"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

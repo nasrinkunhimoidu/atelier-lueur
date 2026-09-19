@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Atelier Lueur</title>
+  <meta name="description" content="Secure checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+
+    <section class="page-hero" style="padding:34px 0 8px;background:transparent">
+      <div class="inner container">
+        <nav class="breadcrumb"><a href="cart.html">Bag</a><span class="sep">/</span><span>Checkout</span></nav>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top:24px">
+      <div class="checkout-grid">
+
+        <div>
+          <!-- stepper -->
+          <div class="stepper" id="stepper">
+            <div class="step active" data-step="1"><span class="step-num">1</span><div><b>Contact &amp; Delivery</b><small>Where should we send it?</small></div></div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2"><span class="step-num">2</span><div><b>Payment</b><small>How would you like to pay?</small></div></div>
+          </div>
+
+          <!-- STEP 1 -->
+          <div class="checkout-panel" id="panel1">
+            <h2 class="h-sm mb-8">Contact</h2>
+
+            <div class="field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" id="cEmail" placeholder="you@example.com" autocomplete="email">
+              <div class="field-err">Enter a valid email address.</div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>First name <span class="req">*</span></label>
+                <input type="text" id="cFirst" placeholder="Ananya" autocomplete="given-name">
+                <div class="field-err">Required.</div>
+              </div>
+              <div class="field">
+                <label>Last name <span class="req">*</span></label>
+                <input type="text" id="cLast" placeholder="Sharma" autocomplete="family-name">
+                <div class="field-err">Required.</div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Address <span class="req">*</span></label>
+              <input type="text" id="cAddr" placeholder="MG Road, 42" autocomplete="street-address">
+              <div class="field-err">Required.</div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>City <span class="req">*</span></label>
+                <input type="text" id="cCity" placeholder="Bengaluru">
+                <div class="field-err">Required.</div>
+              </div>
+              <div class="field" style="flex:0.6">
+                <label>Postcode <span class="req">*</span></label>
+                <input type="text" id="cZip" placeholder="560001" maxlength="10">
+                <div class="field-err">Required.</div>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>Country <span class="req">*</span></label>
+                <select id="cCountry">
+                  <option value="">Select a country…</option><option>United Kingdom</option><option>United States</option><option>United Arab Emirates</option><option>Singapore</option><option>Australia</option><option>Canada</option><option>Germany</option><option>France</option><option>Italy</option><option>Spain</option><option>Japan</option><option>South Africa</option><option>India</option>
+                </select>
+                <div class="field-err">Required.</div>
+              </div>
+              <div class="field">
+                <label>Phone <span class="req">*</span></label>
+                <input type="tel" id="cPhone" placeholder="+44 7700 900123">
+                <div class="field-err">Required.</div>
+              </div>
+            </div>
+
+            <label class="saved-addr mt-8" style="display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:13px">
+              <input type="checkbox" id="saveAddr" checked style="accent-color:var(--ink)"> Save this address to my account for faster checkout next time.
+            </label>
+
+            <h2 class="h-sm mt-32 mb-8">Delivery method</h2>
+            <div class="grid gap-12">
+              <div class="method-card selected" data-mid="std">
+                <span class="radio"></span>
+                <div><div class="mc-title">Standard</div><div class="mc-sub">Arrives in 4–6 business days</div></div>
+                <span class="mc-price">FREE</span>
+              </div>
+              <div class="method-card" data-mid="exp">
+                <span class="radio"></span>
+                <div><div class="mc-title">Express</div><div class="mc-sub">Arrives in 2–3 business days</div></div>
+                <span class="mc-price">₹399</span>
+              </div>
+              <div class="method-card" data-mid="prm">
+                <span class="radio"></span>
+                <div><div class="mc-title">Premium Same-Day</div><div class="mc-sub">Today — London, New York, Paris</div></div>
+                <span class="mc-price">₹599</span>
+              </div>
+            </div>
+
+            <button class="btn btn--primary btn--block mt-32" id="toStep2">Continue to Payment <span class="ico">→</span></button>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="checkout-panel" id="panel2" style="display:none">
+            <h2 class="h-sm mb-16">Payment</h2>
+
+            <div class="method-card selected mb-16" data-pay="card">
+              <span class="radio"></span>
+              <div class="pay-option" style="flex:1"><div><div class="mc-title">Card</div><div class="mc-sub">Visa, Mastercard, Amex</div></div>
+              <div class="pay-icons"><span>VISA</span><span>AMEX</span><span>MC</span></div></div>
+            </div>
+
+            <div id="cardFields">
+              <div class="field">
+                <label>Card number <span class="req">*</span></label>
+                <input type="text" id="cardNum" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19">
+                <div class="field-err">Enter a valid card number.</div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label>Expiry <span class="req">*</span></label>
+                  <input type="text" id="cardExp" inputmode="numeric" placeholder="MM / YY" maxlength="7">
+                  <div class="field-err">Valid future date required.</div>
+                </div>
+                <div class="field">
+                  <label>CVC <span class="req">*</span></label>
+                  <input type="text" id="cardCvc" inputmode="numeric" placeholder="123" maxlength="4">
+                  <div class="field-err">3–4 digits.</div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Name on card <span class="req">*</span></label>
+                <input type="text" id="cardName" placeholder="ANANYA SHARMA">
+                <div class="field-err">Required.</div>
+              </div>
+            </div>
+
+            <div class="method-card mb-8" data-pay="paypal">
+              <span class="radio"></span>
+              <div class="pay-option" style="flex:1"><div><div class="mc-title">PayPal</div><div class="mc-sub">You'll be redirected to confirm</div></div><span class="pay-icons"><span style="font-weight:600;font-size:13px">Pay</span><span>Pal</span></div></div>
+            </div>
+            <div class="method-card" data-pay="apple">
+              <span class="radio"></span>
+              <div class="pay-option" style="flex:1"><div><div class="mc-title">Apple Pay</div><div class="mc-sub">Fast checkout with Face ID</div></div><span class="pay-icons"><span style="font-weight:600;font-size:13px"></span></div></div>
+            </div>
+
+            <div class="pay-note mt-24" style="display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--ink-soft);background:var(--bg-cream);padding:14px 16px;border-radius:var(--radius)">
+              🔒 256-bit SSL encrypted. We never store your full card details.
+            </div>
+
+            <div class="flex gap-12 mt-32">
+              <button class="btn btn--ghost" id="backStep1">← Back</button>
+              <button class="btn btn--primary btn--block" id="placeOrder"><span class="shine"></span>Pay <span class="amt-btn" id="payAmt"></span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- summary -->
+        <aside class="checkout-summary" id="checkoutSummary"></aside>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

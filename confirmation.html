@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — Atelier Lueur</title>
+  <meta name="description" content="Thank you for your order.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+
+    <section class="success-hero">
+      <div class="container">
+        <div class="success-ring">✓</div>
+        <span class="eyebrow" style="justify-content:center">Payment confirmed</span>
+        <h1 class="h-lg mt-16">Grazie, thank you.</h1>
+        <p class="muted mt-8">Your order has been received and is being prepared with care.<br>A confirmation email is on its way.</p>
+
+        <div class="order-ticket">
+          <div class="ticket-head">
+            <div><div class="ord-id" id="ordId">AT-XXXXXX</div><div class="tiny mt-8" style="opacity:.6" id="ordDate"></div></div>
+            <span class="ord-status">Processing</span>
+          </div>
+          <div class="ticket-body">
+            <div class="checkout-summary mini" id="ordSummary"></div>
+            <div class="grid g-2 mt-24">
+              <div>
+                <div class="tiny mb-8" style="letter-spacing:.2em;color:var(--ink-faint)">DELIVER TO</div>
+                <div class="small" id="ordAddr" style="line-height:1.8"></div>
+              </div>
+              <div>
+                <div class="tiny mb-8" style="letter-spacing:.2em;color:var(--ink-faint)">PAYMENT</div>
+                <div class="small" id="ordPay"></div>
+              </div>
+            </div>
+            <div class="os-divider"></div>
+            <div class="os-total"><span class="lbl">Total Paid</span><span class="amt" id="ordTotal"></span></div>
+          </div>
+        </div>
+
+        <div class="mt-48 flex gap-12" style="justify-content:center;flex-wrap:wrap">
+          <a class="btn btn--primary" href="shop.html">Continue Shopping <span class="ico">→</span></a>
+          <a class="btn btn--ghost" href="account.html#orders">Track My Order</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/confirmation.js"></script>
+</body>
+</html>

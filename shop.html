@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All — Atelier Lueur</title>
+  <meta name="description" content="Browse the full Atelier Lueur collection of modern London & NY fashion. Filter by category, colour, size and price.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+
+    <section class="page-hero">
+      <div class="inner container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Shop</span></nav>
+        <h1 class="display" id="pageTitle">Shop the Collection</h1>
+        <p>Filters, sorting and endless combinations. Find the piece that feels like it was made for you.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top:40px">
+      <button class="filter-mobile-toggle" id="filterToggle">☰ Refine &amp; Filter</button>
+      <div class="shop-layout">
+
+        <!-- ============ FILTERS ============ -->
+        <aside class="filter-panel" id="filterPanel">
+
+          <div class="filter-group" id="fg-cat">
+            <div class="filter-title">Category <span class="chev">▾</span></div>
+            <div class="filter-body" id="filters-cat"></div>
+          </div>
+
+          <div class="filter-group" id="fg-tag">
+            <div class="filter-title">Collections <span class="chev">▾</span></div>
+            <div class="filter-body" id="filters-tag"></div>
+          </div>
+
+          <div class="filter-group" id="fg-color">
+            <div class="filter-title">Colour <span class="chev">▾</span></div>
+            <div class="filter-body" id="filters-color"></div>
+          </div>
+
+          <div class="filter-group" id="fg-size">
+            <div class="filter-title">Size <span class="chev">▾</span></div>
+            <div class="filter-body" id="filters-size"></div>
+          </div>
+
+          <div class="filter-group" id="fg-price">
+            <div class="filter-title">Price <span class="chev">▾</span></div>
+            <div class="filter-body">
+              <div class="range-track">
+                <input type="range" id="priceMax" min="500" max="16000" step="250" value="16000">
+              </div>
+              <div class="price-labels"><span id="priceShown">₹999 – ₹16,000</span><span id="priceMaxShown">₹16,000</span></div>
+            </div>
+          </div>
+
+          <div class="filter-group" id="fg-rating">
+            <div class="filter-title">Rating <span class="chev">▾</span></div>
+            <div class="filter-body" id="filters-rating"></div>
+          </div>
+
+          <button class="filter-clear" id="filterClear">Clear all filters</button>
+        </aside>
+
+        <!-- ============ RESULTS ============ -->
+        <div>
+          <div class="active-chips" id="activeChips" style="display:none"></div>
+
+          <div class="shop-toolbar">
+            <span class="shop-count"><b id="resultCount">0</b> items found</span>
+            <div class="flex gap-8">
+              <div class="sort-select">
+                <select id="sortSelect" aria-label="Sort products">
+                  <option value="featured">Sort: Featured</option>
+                  <option value="price-asc">Price: Low → High</option>
+                  <option value="price-desc">Price: High → Low</option>
+                  <option value="rating">Top Rated</option>
+                  <option value="name">Name A–Z</option>
+                </select>
+              </div>
+              <div class="layout-toggle">
+                <button class="layout-btn active" data-grid="4" aria-label="Four columns"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></button>
+                <button class="layout-btn" data-grid="3" aria-label="Three columns"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="5.5" height="5.5" rx="1.5"/><rect x="9.2" y="3" width="5.5" height="5.5" rx="1.5"/><rect x="15.4" y="3" width="5.5" height="5.5" rx="1.5"/><rect x="3" y="9.2" width="5.5" height="5.5" rx="1.5"/><rect x="9.2" y="9.2" width="5.5" height="5.5" rx="1.5"/><rect x="15.4" y="9.2" width="5.5" height="5.5" rx="1.5"/><rect x="3" y="15.4" width="5.5" height="5.5" rx="1.5"/><rect x="9.2" y="15.4" width="5.5" height="5.5" rx="1.5"/><rect x="15.4" y="15.4" width="5.5" height="5.5" rx="1.5"/></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid g-4" id="productGrid"></div>
+          <div class="empty-state" id="shopEmpty" style="display:none">
+            <span class="es-icon">◌</span>
+            <h3>Nothing matches those filters</h3>
+            <p>Try widening your search, or clear a few filters to see more pieces.</p>
+            <button class="btn btn--outline btn--sm" onclick="window.Shop&&Shop.clearAll()">Clear Filters</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bag — Atelier Lueur</title>
+  <meta name="description" content="Review and manage your shopping bag before checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <main data-main>
+
+    <section class="page-hero">
+      <div class="inner container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Bag</span></nav>
+        <h1 class="display mt-16" id="pageTitle">Your Bag</h1>
+        <p>Almost there. Give these pieces a home.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top:24px">
+      <div class="cart-page">
+        <div class="cart-list" id="cartList"></div>
+        <aside class="order-summary" id="orderSummary"></aside>
+      </div>
+    </section>
+
+    <section class="section" id="upsellSection" style="display:none">
+      <div class="container">
+        <div class="flex-between mb-32"><div><span class="eyebrow reveal">Complete the look</span><h2 class="h-md mt-8 reveal" data-delay="1">Loved with your bag</h2></div></div>
+        <div class="grid g-4" id="upsellGrid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="preloader" id="preloader"><div><div class="pl-mark">L<span class="dot">✦</span>UEUR</div><div class="pl-line"></div></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
