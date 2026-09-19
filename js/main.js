@@ -9,9 +9,7 @@
   function mount() {
     initShell({ page: "home" });
 
-    /* hero + editorial imagery */
-    const hero = document.querySelector(".hero-bg");
-    if (hero) hero.style.backgroundImage = `url("${heroImage()}")`;
+    /* editorial imagery */
     const ed = document.getElementById("edImg");
     if (ed) ed.src = editorialImage(3);
 

@@ -26,7 +26,7 @@ Local file | Source | Photographer / credit | Licence
 `images/p_w6.jpg` | [Wedding Gown](https://stocksnap.io/photo/wedding-gown-U4O6ICQKL1) | Beauty and Fashion | CC0 1.0
 `images/p_w7.jpg` | [Clothes Fashion](https://stocksnap.io/photo/clothes-fashion-8H1NE3XL3Q) | Kasia Serbin | CC0 1.0
 `images/p_w8.jpg` | [Clothes Jackets](https://stocksnap.io/photo/clothes-jackets-72V88M4FAC) | Clark Street Mercantile | CC0 1.0
-`images/hero.jpg` | [Perfume Bottle](https://stocksnap.io/photo/perfume-bottle-0BZ1W3NNQK) | Jessica Weiller | CC0 1.0
+`images/hero.jpg` | [Woman in Classic Trench Coat](https://www.pexels.com/photo/woman-in-classic-trench-coat-26100318/) | Pexels (free license) | Free to use
 `images/x_editorial.jpg` | [Watch Accessory](https://stocksnap.io/photo/watch-accessory-R9ALLZAUS8) | Leon Christopher | CC0 1.0
 `images/insta1.jpg` | [Clothes Jackets](https://stocksnap.io/photo/clothes-jackets-72V88M4FAC) | Clark Street Mercantile | CC0 1.0
 `images/insta2.jpg` | [Leather Shoes](https://stocksnap.io/photo/leather-shoes-I1GV6WICCT) | Caio Resende | CC0 1.0
