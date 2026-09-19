@@ -17,3 +17,5 @@ node_modules/
 package-lock.json
 .env
 .env.*
+# nested portfolio repo (not part of the site)
+portfolio/
