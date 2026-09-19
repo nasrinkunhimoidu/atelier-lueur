@@ -476,10 +476,18 @@ h1, h2, h3, h4, .serif {
   animation: heroZoom 2.4s var(--ease) forwards;
 }
 @keyframes heroZoom { to { transform: scale(1.02); } }
+/* Pinterest-grade: warm ivory film tone */
+.hero-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 90% at 15% 20%, rgba(255, 250, 242, 0) 40%, rgba(246, 241, 231, .28) 100%);
+  filter: sepia(.16) saturate(.88) brightness(1.05) contrast(.97);
+}
 .hero::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(246, 241, 233, .97) 0%, rgba(246, 241, 233, .82) 20%, rgba(246, 241, 233, .3) 55%, rgba(246, 241, 233, .05) 100%);
+  background: linear-gradient(90deg, rgba(247, 242, 233, .97) 0%, rgba(247, 242, 233, .84) 22%, rgba(247, 242, 233, .32) 56%, rgba(247, 242, 233, .06) 100%);
 }
 .hero-content { position: relative; z-index: 2; max-width: 640px; padding: 90px 0; }
 .hero-content .eyebrow { opacity: 0; transform: translateY(18px); animation: fadeUp .7s var(--ease) .4s forwards; }
