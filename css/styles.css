@@ -330,6 +330,26 @@ h1, h2, h3, h4, .serif {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-6.6px) rotate(-45deg); }
 
+/* ---------------- Mobile header compaction -----------------
+   Keep the whole header — brand mark, wordmark and every icon
+   action — on ONE vertically-centered row so nothing wraps,
+   drifts or gets clipped on phones. */
+@media (max-width: 560px) {
+  .nav { gap: 10px; }
+  .brand { font-size: 24px; letter-spacing: .1em; gap: 8px; }
+  .brand .mark { width: 29px; height: 29px; font-size: 13px; }
+  .nav-actions { gap: 2px; }
+  .icon-btn { width: 38px; height: 38px; }
+  .icon-btn svg { width: 19px; height: 19px; }
+  .nav-toggle { gap: 4px; padding: 7px; }
+  .nav-toggle span { width: 21px; }
+}
+@media (max-width: 340px) {
+  .brand { font-size: 21px; letter-spacing: .08em; }
+  .brand .mark { width: 26px; height: 26px; font-size: 12px; }
+  .icon-btn { width: 35px; height: 35px; }
+}
+
 /* ---------------- Search panel ---------------- */
 
 .search-panel {
